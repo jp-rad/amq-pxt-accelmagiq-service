@@ -1,20 +1,26 @@
 /**
  * tests go here; this will not be compiled when this package is used as an extension.
  */
-// bar
+bluetooth.onBluetoothConnected(function () {
+    basic.showIcon(IconNames.Yes)
+})
+bluetooth.onBluetoothDisconnected(function () {
+    basic.showIcon(IconNames.Happy)
+})
 input.onButtonPressed(Button.A, function () {
-    a = custom.bar()
+    accelmagiq.notifyData([
+        1,
+        0,
+        0,
+        0
+    ])
 })
-// baz
 input.onButtonPressed(Button.B, function () {
-    a = custom.baz()
+    accelmagiq.notifyData([
+        0.11,
+        0.24,
+        0.14,
+        0.95
+    ])
 })
-let a = 0
-a = -1
-basic.showString("B")
-basic.forever(function () {
-    if (0 <= a) {
-        basic.showNumber(a)
-    }
-    basic.pause(100)
-})
+accelmagiq.startService()

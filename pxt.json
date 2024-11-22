@@ -1,15 +1,18 @@
 {
-    "name": "pxt-ubit-extension",
-    "version": "0.1.0-alpha",
-    "description": "(description: this description is written in pxt.json)",
+    "name": "pxt-accelmagiq-service",
+    "version": "0.0.1-alpha",
+    "description": "A Simplified Analytic Attitude Determination Algorithm Using Accelerometer and Magnetometer on micro:bit.",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "bluetooth": "*"
     },
     "files": [
-        "src/customlib.h",
-        "src/customlib.cpp",
-        "src/custom.ts",
-        "src/custom.cpp",
+        "src/lib/AccelMagiQServiceBase.h",
+        "src/lib/AccelMagiQServiceBase.cpp",
+        "src/lib/AccelMagiQService.h",
+        "src/lib/AccelMagiQService.cpp",
+        "src/accelmagiq.service.ts",
+        "src/accelmagiq.service.cpp",
         "enums.d.ts",
         "shims.d.ts",
         "README.md"
@@ -24,5 +27,49 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "yotta": {
+        "userConfigs": [
+            {
+                "description": "Reset Bluetooth Enabled",
+                "config": {
+                    "microbit-dal": {
+                        "bluetooth": {
+                            "enabled": 1
+                        }
+                    }
+                }
+            },
+            {
+                "description": "Disable Bluetooth Device Infomation Service",
+                "config": {
+                    "microbit-dal": {
+                        "bluetooth": {
+                            "device_info_service": 0
+                        }
+                    }
+                }
+            },
+            {
+                "description": "Disable Bluetooth Secure DFU Service",
+                "config": {
+                    "microbit-dal": {
+                        "bluetooth": {
+                            "dfu_service": 0
+                        }
+                    }
+                }
+            },
+            {
+                "description": "Disable Bluetooth Partial Flashing Service",
+                "config": {
+                    "microbit-dal": {
+                        "bluetooth": {
+                            "partial_flashing": 0
+                        }
+                    }
+                }
+            }
+        ]
+    }
 }

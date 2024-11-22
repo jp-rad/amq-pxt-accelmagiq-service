@@ -1,0 +1,7 @@
+{
+  "accelmagiq.notifyData|block": "notify data %q",
+  "accelmagiq.startService|block": "start AccelMagiQ service",
+  "accelmagiq|block": "AccelMagiQ",
+  "{id:category}Accelmagiq": "Accelmagiq",
+  "{id:group}Service": "Service"
+}
