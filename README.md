@@ -79,10 +79,10 @@ basic.forever(function () {
     accelmagiq.notifyData(estimated)
     angle = accelmagiq.rpyFromQuat(accelmagiq.quatFrom(estimated))
     serial.writeNumbers([
-    accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Roll)),
-    accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Pitch)),
-    accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Yaw)),
-    accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Azimuth))
+        accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Roll)),
+        accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Pitch)),
+        accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Yaw)),
+        accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Azimuth))
     ])
 })
 
@@ -109,10 +109,10 @@ basic.forever(function () {
     accelmagiq.notifyData(estimated)
     angle = accelmagiq.rpyFromQuat(accelmagiq.quatFrom(estimated))
     serial.writeNumbers([
-    accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Roll)),
-    accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Pitch)),
-    accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Yaw)),
-    accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Azimuth))
+        accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Roll)),
+        accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Pitch)),
+        accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Yaw)),
+        accelmagiq.intDeg(accelmagiq.angle(angle, accelmagiq.AngleRPY.Azimuth))
     ])
 })
 
@@ -141,7 +141,7 @@ Data can be read on demand or notified periodically.  </td></tr>
 <tr><td> 2</td><td>Type </td><td>   </td></tr>
 <tr><td> 3</td><td>Requirement </td><td> Mandatory  </td></tr>
 <tr><td> 4</td><td>Abstract: </td><td>   </td></tr>
-<tr><td> 5</td><td>Summary: </td><td> Contains quaternion measurements for w, x, y, and z components as 4 signed 16-bit values in that order and in little endian format. w, x, y, and z values should be divided by 1000.  </td></tr>
+<tr><td> 5</td><td>Summary: </td><td> Contains quaternion measurements for w, x, y, and z components as 4 signed 16-bit values in that order and in little endian format. w, x, y, and z values should be divided by 10000.  </td></tr>
 <tr><td> 6</td><td>Information: </td><td>   </td></tr>
 <tr><td> 7</td><td>Examples </td><td>   </td></tr>
 <tr><td> 8</td><td>Read </td><td> Mandatory  </td></tr>
